@@ -10,8 +10,10 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Home</b-nav-item>
-          <b-nav-item href="#">Contact</b-nav-item>
+          <b-nav-item><router-link to="/">Home</router-link></b-nav-item>
+          <b-nav-item>
+            <router-link to="/contact">Contact</router-link></b-nav-item
+          >
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -65,6 +67,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: white;
+}
 .navColor {
   background-color: #55297f !important;
 }
@@ -72,9 +78,6 @@ export default {
 nav.navColor ul li a {
   position: relative;
   z-index: 1;
-}
-nav.navColor ul li a:hover {
-  color: #552955;
 }
 nav.navColor ul li a:after {
   display: block;

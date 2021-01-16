@@ -1,15 +1,32 @@
 import Vue from "vue";
-import Router from "vue-router";
+import VueRouter from "vue-router";
 import Home from "@/components/Home/Home";
+import Contact from "@/components/Contact/Contact";
+import Register from "@/components/Register/Register";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
-  routes: [
-    {
-      path: "/",
-      name: "Home",
-      component: Home
-    }
-  ]
+const routes = [
+  {
+    path: "/",
+    name: "home",
+    component: Home
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: Contact
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register
+  }
+];
+
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.base,
+  routes
 });
+export default router;

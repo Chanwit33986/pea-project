@@ -5,7 +5,7 @@
       <b-container>
         <breadcrumb />
         <hr />
-        <router-view />
+        <router-view></router-view>
       </b-container>
     </main>
   </div>
